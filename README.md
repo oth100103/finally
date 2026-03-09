@@ -23,19 +23,9 @@ Single Docker container serving everything on port 8000:
 - **AI**: LiteLLM → OpenRouter (Cerebras inference) with structured outputs
 - **Market data**: Built-in GBM simulator (default) or Massive API (optional)
 
-## Quick Start
+## Status
 
-```bash
-# Clone and configure
-cp .env.example .env
-# Add your OPENROUTER_API_KEY to .env
-
-# Run with Docker
-docker build -t finally .
-docker run -v finally-data:/app/db -p 8000:8000 --env-file .env finally
-
-# Open http://localhost:8000
-```
+**In progress.** The market data backend (simulator + Massive API client) is complete. See `planning/PLAN.md` for the full specification and `planning/MARKET_DATA_SUMMARY.md` for details on the completed market data component.
 
 ## Environment Variables
 
@@ -49,12 +39,9 @@ docker run -v finally-data:/app/db -p 8000:8000 --env-file .env finally
 
 ```
 finally/
-├── frontend/    # Next.js static export
-├── backend/     # FastAPI uv project
+├── backend/     # FastAPI uv project (market data complete)
 ├── planning/    # Project documentation and agent contracts
-├── test/        # Playwright E2E tests
-├── db/          # SQLite volume mount (runtime)
-└── scripts/     # Start/stop helpers
+└── LICENSE
 ```
 
 ## License
