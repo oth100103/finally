@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
+<<<<<<< HEAD
   --color-background: #0d1117;
   --color-foreground: #e6edf3;
   --color-surface: #161b22;
@@ -19,11 +20,38 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-mono), monospace;
+=======
+  --color-bg-primary: #0d1117;
+  --color-bg-secondary: #1a1a2e;
+  --color-bg-panel: #161b22;
+  --color-bg-hover: #21262d;
+  --color-border: #30363d;
+  --color-text-primary: #e6edf3;
+  --color-text-secondary: #8b949e;
+  --color-text-muted: #6e7681;
+  --color-accent-yellow: #ecad0a;
+  --color-accent-blue: #209dd7;
+  --color-accent-purple: #753991;
+  --color-gain: #26a641;
+  --color-loss: #f85149;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+  --font-sans: "Geist", ui-sans-serif, sans-serif;
+}
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+>>>>>>> cf41801d4655da3edb3b665d86c9a0a1fc9384d7
 }
 
 /* Price flash animations */
 @keyframes flash-green {
+<<<<<<< HEAD
   0% { background-color: rgba(63, 185, 80, 0.3); }
+=======
+  0% { background-color: rgba(38, 166, 65, 0.3); }
+>>>>>>> cf41801d4655da3edb3b665d86c9a0a1fc9384d7
   100% { background-color: transparent; }
 }
 
@@ -32,24 +60,47 @@ body {
   100% { background-color: transparent; }
 }
 
+<<<<<<< HEAD
 .flash-green {
   animation: flash-green 500ms ease-out;
 }
 
 .flash-red {
+=======
+.price-flash-up {
+  animation: flash-green 500ms ease-out;
+}
+
+.price-flash-down {
+>>>>>>> cf41801d4655da3edb3b665d86c9a0a1fc9384d7
   animation: flash-red 500ms ease-out;
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;
+<<<<<<< HEAD
 }
 
 ::-webkit-scrollbar-track {
   background: var(--color-background);
+=======
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+>>>>>>> cf41801d4655da3edb3b665d86c9a0a1fc9384d7
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-border);
   border-radius: 3px;
 }
+<<<<<<< HEAD
+=======
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+>>>>>>> cf41801d4655da3edb3b665d86c9a0a1fc9384d7

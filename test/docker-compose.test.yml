@@ -1,12 +1,17 @@
 services:
   app:
+<<<<<<< HEAD
     build:
       context: ..
       dockerfile: Dockerfile
+=======
+    image: finally
+>>>>>>> cf41801d4655da3edb3b665d86c9a0a1fc9384d7
     ports:
       - "8000:8000"
     environment:
       - LLM_MOCK=true
+<<<<<<< HEAD
       - OPENROUTER_API_KEY=test-key
       - FINALLY_DB_PATH=/app/db/finally.db
     volumes:
@@ -31,3 +36,11 @@ services:
 
 volumes:
   test-data:
+=======
+      - OPENROUTER_API_KEY=test
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 2s
+      timeout: 5s
+      retries: 10
+>>>>>>> cf41801d4655da3edb3b665d86c9a0a1fc9384d7
