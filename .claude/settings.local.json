@@ -24,7 +24,8 @@
       "Bash(uv run:*)",
       "Bash(mkdir:*)",
       "Bash(npm run:*)",
-      "Bash(chmod +x:*)"
+      "Bash(chmod +x:*)",
+      "Bash(npx jest:*)"
     ]
   },
   "sandbox": {

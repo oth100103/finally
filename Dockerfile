@@ -17,6 +17,7 @@ WORKDIR /app/backend
 
 # Copy backend and install dependencies
 COPY backend/pyproject.toml backend/uv.lock* ./
+RUN touch README.md
 RUN uv sync --no-dev --no-editable
 
 # Copy backend source
